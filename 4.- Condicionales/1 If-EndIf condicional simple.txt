@@ -1,0 +1,47 @@
+'Algoritmo que determine si una persona es mayor o menor de edad.
+
+Sub MayorOMenor()
+
+    Dim Edad As Integer
+    
+    Edad = InputBox("Por favor coloque la edad", "Ingrese la edad")
+    
+    If Edad >= 18 Then
+        MsgBox "La persona es mayor de edad"
+    Else
+        MsgBox "La persona es menor de edad"
+    End If
+
+End Sub
+
+'Algoritmo que determine si una persona gano o no un examen matemático.
+
+Sub GanoExamen()
+    Dim Nota As Double
+    
+    Nota = InputBox("Por favor ingrese la nota", "Nota")
+    
+    If Nota >= 3 Then
+        MsgBox "Has ganado"
+    Else
+        MsgBox "Has perdido"
+    End If
+
+End Sub
+
+'Algoritmo que determine el numero mayor de 2 leídos.
+
+
+Sub NumeroMayor()
+    Dim Numero1 As Double, numero2 As Double
+    
+    Numero1 = InputBox("Por favor ingrese el primer numero", "Primer numero")
+    numero2 = InputBox("Por favor ingrese el segundo numero", "Segundo numero")
+
+    If Numero1 > numero2 Then
+        MsgBox Numero1
+    Else
+        MsgBox numero2
+    End If
+
+End Sub

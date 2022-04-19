@@ -1,0 +1,38 @@
+'Algoritmo que determine si un numero es mayor que 5 y menor o igual que 10.
+
+Sub Entre()
+
+    Dim numero As Double
+    
+    numero = InputBox("Ingrese numero")
+    
+    If numero > 5 And numero <= 10 Then
+        MsgBox "El nuemero " & numero & " esta entre 6 y 10"
+    Else
+        MsgBox "El numero " & numero & " no esta entre 6 y 10"
+    End If
+    
+
+End Sub
+
+'Hacer algoritmo que pida 3 números y que escriba si son todos iguales, si hay dos iguales o todos son diferentes.
+
+Sub comparativonumeros()
+    
+    Dim Numero1 As Double, Numero2 As Double, Numero3 As Double
+    
+    Numero1 = InputBox("Ingrese el numero 1")
+    Numero2 = InputBox("Ingrese el numero 2")
+    Numero3 = InputBox("Ingrese el numero 3")
+    
+    If Numero1 = Numero2 And Numero1 = Numero3 Then
+        MsgBox "Los tres numeros son iguales: " & Numero1
+    Else
+        If Numero1 = Numero2 Or Numero1 = Numero3 Or Numero2 = Numero3 Then
+            MsgBox "Hay dos numeros iguales"
+        Else
+            MsgBox "Todos son diferentes"
+        End If
+    End If
+
+End Sub

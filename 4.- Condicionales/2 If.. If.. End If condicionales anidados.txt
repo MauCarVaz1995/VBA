@@ -1,0 +1,41 @@
+'Elaborar algoritmo donde según la edad determine lo siguiente: menor que 12 colocar niño,
+'menor de 18 colocar joven y mayor o igual que 18 colocar adulto, imprimir el resultado.
+
+Sub EtapaPersona()
+
+    Dim Edad As Integer
+    
+    Edad = InputBox("Por favor ingrese la edad", "Ingrese edad", 18)
+    
+    If Edad < 12 Then
+        MsgBox "Es un niño"
+    Else
+        If Edad < 18 Then
+            MsgBox "Es un joven"
+        Else
+            MsgBox "Es un adulto"
+        End If
+    End If
+
+End Sub
+
+'Leer un numero y determinar si es positivo, negativo o cero.
+
+Sub TipoNumero()
+
+    Dim numero As Double
+    
+    numero = InputBox("Ingrese un numero", "Ingrese numero", 0)
+    
+    If numero = 0 Then
+        MsgBox "Numero es cero"
+    Else
+        If numero < 0 Then
+            MsgBox "Numero es negativo"
+        Else
+            MsgBox "Numero es positivo"
+        End If
+    End If
+
+End Sub
+

@@ -1,0 +1,116 @@
+'Elaborar un algoritmo que imprima el nombre del día de la semana dependiendo del numero ingresado.
+'Si ingresan el numero 1 este correspondería al día lunes, si ingresan el 2 este corresponde al día martes
+'y así sucesivamente hasta llegar al día domingo.
+'___________________________________________________________
+
+Sub DiaSemana()
+    
+    Dim NumeroDia As Integer
+    
+    NumeroDia = InputBox("Ingrese el numero de dia, " & vbNewLine & vbNewLine & "Donde el 1 es lunes y el 7 es domingo", "Numero de dia")
+    
+    Select Case NumeroDia
+        Case 1:
+            MsgBox "Lunes"
+        Case 2:
+            MsgBox "Martes"
+        Case 3:
+            MsgBox "Miercoles"
+        Case 4:
+            MsgBox "Jueves"
+        Case 5:
+            MsgBox "Viernes"
+        Case 6:
+            MsgBox "Sabado"
+        Case 7:
+            MsgBox "Domingo"
+        Case Else
+            MsgBox "Valor digitado no es valido"
+            
+    End Select
+    
+
+End Sub
+
+
+'Crear algoritmo que determine la categoría a la que pertenece un deportista:
+
+'10 a 14 años
+'15 a 18 años
+'19 a 25 años
+'26 a 50 años
+'51 años en adelante
+'
+'Si ingresan una edad no valida imprimir “Dato no valido”
+'___________________________________________________________
+
+Sub categoria()
+
+    Dim edad As Integer
+    
+    edad = InputBox("Ingrese la edad")
+    
+    Select Case edad
+        Case 10 To 14:
+            MsgBox "La categoria es de 10 a 14 años"
+        Case 15 To 18:
+            MsgBox "La categoria es de 15 a 18 años"
+        Case 19 To 25:
+            MsgBox "La categoria es de 19 a 25 años"
+        Case 26 To 50:
+            MsgBox "La categoria es de 26 a 50 años"
+        Case 51 To 1000:
+            MsgBox "La categoria es de 51 años en adelante"
+        Case Else
+            MsgBox "No hay categoria"
+    End Select
+
+End Sub
+
+
+'Elaborar algoritmo donde según la edad determine lo siguiente: menor que 12 colocar niño,
+'menor de 18 colocar joven y mayor o igual que 18 colocar adulto, imprimir el resultado.
+
+Sub EtapaPersona()
+
+    Dim edad As Integer
+    
+    edad = InputBox("Por favor ingrese la edad", "Ingrese edad", 18)
+    
+    If edad < 12 Then
+        MsgBox "Es un niño"
+    Else
+        If edad < 18 Then
+            MsgBox "Es un joven"
+        Else
+            MsgBox "Es un adulto"
+        End If
+    End If
+
+End Sub
+
+Sub EtapaPersona2()
+
+    Dim edad As Integer
+    
+    edad = InputBox("Por favor ingrese la edad", "Ingrese edad", 18)
+    
+    Select Case edad
+        Case 0 To 11:
+            MsgBox "Es un niño"
+        Case 12 To 17:
+            MsgBox "Es un joven"
+        Case Is > 18:
+            MsgBox "Es un adulto"
+    End Select
+    
+    
+End Sub
+
+
+
+
+
+
+
+
