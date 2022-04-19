@@ -1,0 +1,39 @@
+'Imprimir los números del 1 al 10.
+
+Sub Imprimir()
+    
+    Dim contador As Integer
+    contador = 1
+    
+    Do
+        MsgBox contador
+        contador = contador + 1
+    
+    Loop While contador <= 10
+
+
+End Sub
+
+
+'Programa que determine el elemento mayor de n números positivos
+'La peticion de numeros se debe de detener una vez se digita el -1
+
+Sub numeromayor()
+
+    Dim numeromayor As Double
+    Dim numeroleido As Double
+    
+    numeromayor = 0
+    
+    Do
+        numeroleido = InputBox("ingrese un numero", "Ingrese numero")
+        
+        If numeroleido > numeromayor Then
+            numeromayor = numeroleido
+        End If
+    
+    Loop While numeroleido > 0
+
+    MsgBox "El numero mayor es " & numeromayor
+
+End Sub

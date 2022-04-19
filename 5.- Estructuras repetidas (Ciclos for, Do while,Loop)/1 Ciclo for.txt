@@ -1,0 +1,70 @@
+'Imprimir los números del 1 al 10.
+
+Sub Imprimir1a10()
+    
+    Dim CadenaNumeros As String
+    For i = 1 To 10
+    
+        CadenaNumeros = CadenaNumeros & i & " "
+    
+    Next i
+    MsgBox CadenaNumeros
+End Sub
+
+'Imprimir los números del 10 al 1.
+
+Sub Imprimir10a1()
+    
+    For i = 10 To 1 Step -1
+    
+        MsgBox i
+            
+    Next i
+End Sub
+
+'Imprimir los números pares del 2 al 20
+
+Sub Imprimir2al20()
+    
+    For i = 2 To 20 Step 2
+    
+        MsgBox i
+            
+    Next i
+End Sub
+
+'Pedir al usuario un numero e imprimir la tabla de multiplicar
+Sub TablaMultiplicar()
+    
+    Dim numero As Double
+    
+    numero = InputBox("Ingrese un numero")
+    
+    For i = 1 To 10
+    
+        Debug.Print i & " x " & numero & " = " & i * numero
+            
+    Next i
+    
+End Sub
+
+'Pedir al usuario un numero y mostrar el factorial
+
+Sub Factorial()
+    
+    Dim numero As Double
+    Dim NumeroFactorial As Double
+    numero = InputBox("Ingrese un numero")
+    
+    NumeroFactorial = 1
+    
+    For i = numero To 1 Step -1
+    
+        NumeroFactorial = NumeroFactorial * i
+            
+    Next i
+    
+    MsgBox "El factorial de " & numero & " es " & NumeroFactorial
+    
+End Sub
+

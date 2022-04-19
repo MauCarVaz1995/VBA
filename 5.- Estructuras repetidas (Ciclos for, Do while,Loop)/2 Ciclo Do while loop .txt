@@ -1,0 +1,43 @@
+'Imprimir los números del 1 al 10.
+
+Sub Imprimir()
+
+    Dim contador As Integer
+    
+    contador = 1
+    
+    Do While contador <= 10
+    
+        Debug.Print contador
+        contador = contador + 1
+         
+    Loop
+
+End Sub
+
+'Capturar n números, imprimir si son negativos, positivos o igual a cero,
+'cuando el usuario digita la letra x el procedimiento se debe de detener y notificar al usuario
+
+Sub ValidarNumeros()
+
+    Dim Numero As String
+    
+    Numero = InputBox("Ingrese un numero cualquiera")
+    
+    Do While Numero <> "x"
+    
+        If CDbl(Numero) = 0 Then
+            MsgBox "el numero digitado es igual a cero"
+        Else
+            If CDbl(Numero) > 0 Then
+                MsgBox "El numero digitado es positivo"
+            Else
+                MsgBox "El numero digitado es negativo"
+            End If
+        End If
+        Numero = InputBox("Ingrese un nuevo numero")
+    Loop
+
+    MsgBox "El usuario digito la X y se finalizo el procedimiento"
+
+End Sub

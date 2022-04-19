@@ -1,0 +1,63 @@
+'Elabore un algoritmo requerido para un software en la Universidad que permite digitar
+'para cada uno de los 3 grupos que hay actualmente, el promedio del periodo de cada estudiante.
+'Al digitar esos promedios de cada estudiante, se registra el ID (Documento de identidad)
+'y en cuanto le quedó el promedio, cada grupo termina cuando se digita un asterisco (*) en el ID.
+'Imprima cuantos estudiantes quedaron con una nota promedio superior a 4.5 en cada grupo y la nota promedio,
+'tambien debes imprimir la nota promedio de la Universidad y la cantidad de estudiantes con nota promedio menor 3.
+'
+'Variables que necesitamos:Id, NotaLeida, cantidadestgrupo, sumanotagrupo, cantidadestuniversidad,
+'                            sumanotauniversidad , estudiantesconnota45, estudiantesnotamenora3
+'
+'Qué nos piden:estudiantes con nota superior a 4.5 por grupo y la nota promedio del grupo,
+'nota promedio de universidad y cantidad estudiantes con nota promedio menor a 3
+
+Sub EstudiantesUniversidad()
+
+    Dim Id As String, NotaLeida As Double, CantidadEstGrupo As Integer, SumaNotaGrupo As Double
+    Dim CantdadEstUniversidad As Integer, SumaNotaUniversidad As Double, EstNotamay45 As Integer, EstNotaMe3 As Integer
+
+    EstNotaMe3 = 0
+    SumaNotaUniversidad = 0
+    CantdadEstUniversidad = 0
+    
+    For i = 1 To 3
+    
+        CantidadEstGrupo = 0
+        SumaNotaGrupo = 0
+        EstNotamay45 = 0
+        
+        Id = InputBox("Ingrese el id del estudiante", "Ingrese Id")
+        NotaLeida = InputBox("Ingrese la nota del estudiante", "Ingrese nota")
+        
+        Do While Id <> "*"
+        
+            If NotaLeida > 4.5 Then
+                EstNotamay45 = EstNotamay45 + 1
+            End If
+            
+            If NotaLeida < 3 Then
+                EstNotaMe3 = EstNotaMe3 + 1
+            End If
+            CantidadEstGrupo = CantidadEstGrupo + 1
+            SumaNotaGrupo = SumaNotaGrupo + NotaLeida
+            
+            Id = InputBox("Ingrese el id del estudiante", "Ingrese Id")
+            If Id <> "*" Then
+                NotaLeida = InputBox("Ingrese la nota del estudiante", "Ingrese nota")
+            End If
+        Loop
+        
+        MsgBox "Los estudiantes con nota promedio superior a 4.5 son " & EstNotamay45
+        MsgBox "La nota promedio del grupo es " & SumaNotaGrupo / CantidadEstGrupo
+        
+        SumaNotaUniversidad = SumaNotaUniversidad + SumaNotaGrupo
+        CantdadEstUniversidad = CantdadEstUniversidad + CantidadEstGrupo
+        
+    Next i
+    
+    MsgBox "la nota promedio de la universidad es " & SumaNotaUniversidad / CantdadEstUniversidad
+    
+    MsgBox "La cantidad de estudiantes con nota promedio inferior a 3 es " & EstNotaMe3
+    
+    
+End Sub

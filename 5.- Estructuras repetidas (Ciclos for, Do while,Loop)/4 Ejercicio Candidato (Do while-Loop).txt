@@ -1,0 +1,46 @@
+'Leer los n cantidad de votos otorgados a los 3 candidatos a la gobernación,
+'e imprimir el número del candidato ganador (el 1, el 2 o el 3) y la cantidad de votos que obtuvo,
+'la lectura de los votos se para una vez el usuario digita el numero cero (0)
+'______________________________________________________________________________________________________
+'Variables: Votos1 , votos2, votos3, votoleido
+'Qué nos estan pidiendo: Candidato ganador y la cantidad de votos.
+
+Sub EjercicioCandidatos()
+
+    Dim Votos1 As Integer, Votos2 As Integer, Votos3 As Integer, VotoLeido As Integer
+    
+    VotoLeido = InputBox("Ingrese el candidato por el cual votaron")
+    
+    Votos1 = 0
+    Votos2 = 0
+    Votos3 = 0
+    
+    Do While VotoLeido <> 0
+    
+        Select Case VotoLeido
+        
+            Case 1
+                Votos1 = Votos1 + 1
+            Case 2
+                Votos2 = Votos2 + 1
+            Case 3
+                Votos3 = Votos3 + 1
+        End Select
+        
+        VotoLeido = InputBox("Ingrese el candidato por el cual votaron")
+    Loop
+    
+    If Votos1 > Votos2 And Votos1 > Votos3 Then
+        MsgBox "El candidato ganador es el numero 1" & vbNewLine & vbNewLine & "Con una cantidad de votos " & Votos1
+    Else
+        If Votos2 > Votos1 And Votos2 > Votos3 Then
+            MsgBox "El candidato ganador es el numero 2" & vbNewLine & vbNewLine & "Con una cantidad de votos " & Votos2
+        Else
+            If Votos3 > Votos2 And Votos3 > Votos1 Then
+                MsgBox "El candidato ganador es el numero 3" & vbNewLine & vbNewLine & "Con una cantidad de votos " & Votos3
+            Else
+                MsgBox "Empate de dos o 3 candidatos"
+            End If
+        End If
+    End If
+End Sub
