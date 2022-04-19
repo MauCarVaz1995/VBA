@@ -1,0 +1,36 @@
+Dim NUMERO1 As Double
+Dim NUMERO2 As Double
+Dim numero3 As Integer
+
+Sub EJERCICIO1()
+  
+  NUMERO1 = 0.48
+  
+  MsgBox FormatPercent(NUMERO1)
+
+End Sub
+Sub EJERCICIO2()
+
+    NUMERO1 = CDbl(InputBox("Ingrese un numero", "Ingrese numero"))
+    
+    NUMERO2 = Round(NUMERO1, 1)
+    
+    
+
+End Sub
+Sub EJERCICIO3()
+
+    NUMERO1 = CDbl(InputBox("Ingrese un numero", "Ingrese numero"))
+    
+    numero3 = Int(NUMERO1)
+
+End Sub
+
+Sub ejercicioSigno()
+
+    NUMERO1 = CDbl(InputBox("Ingrese un numero", "ingrese numero"))
+    
+    MsgBox Sgn(NUMERO1)
+    
+
+End Sub

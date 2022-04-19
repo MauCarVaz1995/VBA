@@ -1,0 +1,30 @@
+Dim dato1 As String
+Dim dato2 As String
+Dim dato3 As Long
+Dim Suma As Double
+
+Sub ejercicio1()
+
+    dato1 = InputBox("Ingrese un numero", "Ingrese")
+    dato2 = InputBox("Ingrese un numero", "Ingrese")
+
+    Suma = Val(dato1) + Val(dato2)
+
+End Sub
+Sub ejercicio2()
+
+    dato1 = InputBox("Ingrese un numero", "Ingrese")
+    dato2 = InputBox("Ingrese un numero", "Ingrese")
+
+    Suma = CInt(dato1) + CInt(dato2)
+
+End Sub
+
+Sub ejercicio3()
+
+    dato3 = 43580
+    
+    MsgBox CDate(dato3)
+    
+
+End Sub

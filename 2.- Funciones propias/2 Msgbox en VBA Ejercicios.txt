@@ -1,0 +1,44 @@
+Sub Ejercicios()
+
+    MsgBox "Hola mundo"
+    
+    
+End Sub
+
+Sub ejercicio2()
+
+    MsgBox "Hola mundo", , "Mau"
+    
+
+End Sub
+
+Sub ejercicio3()
+
+    MsgBox "Hola, mundo", vbInformation, "Bienvenida"
+    
+
+End Sub
+
+Sub ejercicio4()
+
+    MsgBox "Desea continuar ejecutando la aplicación", vbYesNo + vbExclamation + vbDefaultButton2, "Mensaje"
+    
+
+End Sub
+
+Sub ejercicio5()
+
+   Dim resultado As Integer
+   
+   resultado = MsgBox("Por favor seleccione si o no", vbYesNo, "Seleccione")
+   
+   If resultado = 6 Then
+   
+        MsgBox "El boton presionado fue el si"
+    Else
+        If resultado = 7 Then
+            MsgBox "El boton presionado fue el no"
+        End If
+    End If
+
+End Sub

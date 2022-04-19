@@ -1,0 +1,39 @@
+Sub ejercicio1()
+
+    If IsError(Range("b2").Value) = True Then
+    
+        MsgBox "La celda tiene un error"
+    Else
+    
+        MsgBox "La celda no tiene errores"
+        
+    End If
+
+End Sub
+
+Sub ejercicio2()
+
+    Dim Variablevalidar As Variant
+    Dim VariableFuncion As Boolean
+    
+    VariableFuncion = IsEmpty(Variablevalidar)
+    
+
+End Sub
+
+Sub ejercicio3()
+
+    Dim resultadofuncion As Boolean
+    
+    resultadofuncion = IsNumeric("texto")
+    
+End Sub
+
+Sub ejercicio4()
+
+    Dim resultadofuncion As Boolean
+    
+    resultadofuncion = IsDate("1daf12")
+    
+
+End Sub

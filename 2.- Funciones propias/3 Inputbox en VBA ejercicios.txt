@@ -1,0 +1,37 @@
+Sub Ejercicio1()
+    
+    Dim numeroingresado As Double
+    
+    numeroingresado = Application.InputBox("Ingrese un numero", "Ingrese", 1, , , , , 1)
+
+    MsgBox "El numero ingresado es el " & numeroingresado
+
+End Sub
+
+Sub ejercicio2()
+
+    Dim variable As Boolean
+    
+    variable = Application.InputBox("Por favor ingrese verdadero o falso", "Ingrese", , , , , , 4)
+    
+    MsgBox variable
+
+End Sub
+
+Sub ejercicio3()
+
+    Dim variable As Variant
+    
+    variable = Application.InputBox("Por favor seleccione una celda", "Seleccione", , , , , , 8)
+    
+    MsgBox variable
+
+End Sub
+
+Sub ejercicio4()
+
+    variable = InputBox("Ingrese un dato", "ingrese")
+    MsgBox variable
+
+
+End Sub

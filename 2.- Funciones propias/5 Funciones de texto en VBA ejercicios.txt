@@ -1,0 +1,91 @@
+Sub ejercicio1()
+
+    MsgBox Right("Hola soy tu instructor", 5)
+    MsgBox Left("Hola soy tu instructor", 5)
+    
+
+End Sub
+
+Sub ejercicio2()
+
+    Dim variable As String
+    
+    variable = InputBox("por favor ingrese un dato cualquiera", "Ingrese")
+    
+    MsgBox Len(variable)
+    
+
+End Sub
+
+Sub ejerciciomid()
+
+    Dim variable As String
+    
+    variable = InputBox("por favor ingrese un dato cualquiera", "Ingrese")
+    
+    MsgBox Mid(variable, 2, 2)
+   
+
+End Sub
+
+Sub EJERCICIOHALLAR()
+
+    Dim Posicion As Integer
+    Dim textoingreso As String
+    
+    textoingreso = InputBox("Ingrese un texto", "Ingrese")
+    
+    Posicion = InStr(1, textoingreso, "al")
+    
+    If Posicion > 0 Then
+    
+        MsgBox "Las letras al fueron encontradas en el texto ingresado por el usuario"
+    Else
+    
+        MsgBox "las letas al no fueron encontradas en el texto ingresado por el usuario"
+    End If
+    
+End Sub
+
+Sub EjercicioHallarExtraer()
+
+    Dim textoingreso As String
+    Dim Dominio As String
+    
+    textoingreso = InputBox("Por favor ingrese un correo electronico", "Correo", "alvaro.ospina@udemy.com")
+    
+   Dominio = Mid(textoingreso, InStr(1, textoingreso, "@") + 1, 100)
+   
+   MsgBox "El dominio es " & Dominio
+
+End Sub
+
+Sub EjercicioLcaseUcase()
+
+    Dim textoingreso As String
+    Dim Mayusculas As String
+    Dim Minusculas As String
+    
+    textoingreso = InputBox("Por favor ingrese un texto", "Texto")
+    
+    Minusculas = LCase(textoingreso)
+    Mayusculas = UCase(textoingreso)
+    
+    MsgBox Minusculas
+    MsgBox Mayusculas
+
+End Sub
+
+Sub eliminarespacio()
+
+    Dim textoingreso As String
+    
+    textoingreso = InputBox("Ingrese texto", "Quitar espacios")
+    
+    MsgBox "1" & Trim(textoingreso) & "1"
+    MsgBox "1" & LTrim(textoingreso) & "1"
+    MsgBox "1" & RTrim(textoingreso) & "1"
+    
+    
+
+End Sub
