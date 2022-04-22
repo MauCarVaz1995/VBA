@@ -1,0 +1,31 @@
+Function Restar(Numero1 As Double, Numero2 As Double) As Double
+
+    Restar = Numero1 - Numero2
+
+End Function
+
+Function Edad(FechaNacimiento As Date)
+
+    Edad = WorksheetFunction.RoundDown((Date - FechaNacimiento) / 365, 0)
+
+End Function
+
+Function Factorial(Numero As Double)
+
+    Dim Resultado As Double
+    Resultado = 1
+    For i = Numero To 1 Step -1
+    
+        Resultado = Resultado * i
+    
+    Next i
+
+    Factorial = Resultado
+
+End Function
+
+Sub Macro()
+
+    MsgBox Factorial(1000)
+
+End Sub

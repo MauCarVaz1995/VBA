@@ -1,0 +1,18 @@
+Sub Suma(Numero1 As Double, Numero2 As Double)
+
+    MsgBox Numero1 + Numero2
+
+End Sub
+
+Sub PasarPosicion()
+
+    Call Suma(10, 50)
+
+End Sub
+
+Sub PasarXNombre()
+
+    Call Suma(Numero2:=50, Numero1:=10)
+    
+
+End Sub

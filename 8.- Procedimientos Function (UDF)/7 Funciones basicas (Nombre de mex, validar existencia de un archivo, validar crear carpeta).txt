@@ -1,0 +1,63 @@
+Function NombreMes(Fecha As Range)
+
+    Select Case Month(Fecha)
+        Case 1
+            NombreMes = "Enero"
+        Case 2
+            NombreMes = "Febrero"
+        Case 3
+            NombreMes = "Marzo"
+        Case 4
+            NombreMes = "Abril"
+            
+        Case 5
+            NombreMes = "Mayo"
+        Case 6
+            NombreMes = "Junio"
+        Case 7
+            NombreMes = "Julio"
+        Case 8
+            NombreMes = "Agosto"
+        Case 9
+            NombreMes = "Septiembre"
+        Case 10
+            NombreMes = "Octubre"
+        Case 11
+            NombreMes = "Noviembre"
+        Case 12
+            NombreMes = "Diciembre"
+        Case Else
+            NombreMes = "Fecha no valida"
+    End Select
+    
+
+End Function
+
+
+Function ExisteArchivo(Ruta As String) As Boolean
+    
+    Dim archivo As String
+    archivo = Dir(Ruta)
+    
+    If archivo <> "" Then
+        ExisteArchivo = True
+    Else
+        ExisteArchivo = False
+    End If
+    
+End Function
+
+Function ValidarCrearCarpeta(Ruta As String)
+
+    If Dir(Ruta, vbDirectory) = "" Then
+        MkDir (Ruta)
+    End If
+
+End Function
+
+Sub macro()
+
+    ValidarCrearCarpeta ("C:\Users\user\Desktop\Nueva carpeta\prueba")
+
+
+End Sub

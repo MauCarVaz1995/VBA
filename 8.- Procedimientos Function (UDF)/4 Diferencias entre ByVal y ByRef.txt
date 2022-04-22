@@ -1,0 +1,14 @@
+Sub Procedimiento()
+
+    Dim Valores As Double
+    
+    Valores = 1000
+    Call ValorMasCien(Valores)
+    MsgBox Valores
+End Sub
+
+Sub ValorMasCien(Valor As Double)
+
+   Valor = Valor + 100
+
+End Sub

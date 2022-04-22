@@ -1,0 +1,44 @@
+Function Jornada(fecha As Date)
+
+    Dim hora As Date
+    
+    hora = fecha - Int(fecha)
+    
+    If hora >= 0.5 Then
+        Jornada = "Tarde"
+    Else
+        Jornada = "Mañana"
+        
+    End If
+End Function
+
+Function Restar(Numero1 As Double, Numero2 As Double)
+
+    Restar = Numero1 - Numero2
+
+End Function
+
+Sub DescripcionFuncionesMacros()
+
+    Dim DescripcionArgumentos(1 To 2) As String
+    
+    DescripcionArgumentos(1) = "Coloque la fecha"
+    
+    Application.MacroOptions _
+        Macro:="Jornada", _
+        Description:="Devuelve la jornadaa del dia", _
+        argumentdescriptions:=DescripcionArgumentos, _
+        Category:=2
+
+    Erase DescripcionArgumentos
+    
+    DescripcionArgumentos(1) = "Coloque el numero 1"
+    DescripcionArgumentos(2) = "Coloque el numero 2"
+    
+    Application.MacroOptions _
+        Macro:="Restar", _
+        Description:="Devuelve el resultado de la resta de dos numeros", _
+        argumentdescriptions:=DescripcionArgumentos, _
+        Category:=3
+
+End Sub

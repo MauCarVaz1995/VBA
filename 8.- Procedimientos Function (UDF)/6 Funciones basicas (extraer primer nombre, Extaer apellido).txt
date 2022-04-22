@@ -1,0 +1,12 @@
+Function PrimerNombre(Nombre As Range)
+
+    PrimerNombre = Mid(Nombre, 1, InStr(1, Nombre, " ") - 1)
+    
+End Function
+Function UltimoApellido(Nombre As Range)
+
+    Dim nombrealreves As String
+    nombrealreves = StrReverse(Nombre)
+    UltimoApellido = StrReverse(Mid(nombrealreves, 1, InStr(1, nombrealreves, " ") - 1))
+    
+End Function

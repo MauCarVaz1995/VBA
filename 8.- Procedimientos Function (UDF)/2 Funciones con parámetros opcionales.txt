@@ -1,0 +1,38 @@
+Function SumaArrendamientos(FnArrendamientos As Range, Optional FnAdministracion As Boolean) As Double
+    
+    Dim Resultado As Double
+    Resultado = 0
+    
+    For I = 1 To FnArrendamientos.Count
+        
+        Resultado = Resultado + FnArrendamientos(I, 1)
+        
+    Next I
+    
+    If FnAdministracion = True Then
+        SumaArrendamientos = Resultado + (Resultado * 0.1)
+    Else
+        
+        SumaArrendamientos = Resultado
+    End If
+    
+
+End Function
+
+Function ConcatenarRango(Rango As Range, Optional Separador As String)
+
+    Dim Resultado As String
+
+    For I = 1 To Rango.Count
+        
+        If I = 1 Then
+            Resultado = Rango(I, 1)
+        Else
+        
+            Resultado = Resultado & Separador & Rango(I, 1)
+        End If
+    Next I
+    
+    ConcatenarRango = Resultado
+
+End Function

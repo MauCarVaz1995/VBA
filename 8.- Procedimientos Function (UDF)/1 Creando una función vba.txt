@@ -1,0 +1,14 @@
+
+
+Sub MiMacro()
+
+    Dim Dividendo As Double
+    Dim Divisor As Double
+        
+    Dividendo = InputBox("Ingrese el dividendo")
+    Divisor = InputBox("Ingrese el divisor")
+    
+    MsgBox MiDivision(Dividendo, Divisor)
+    
+
+End Sub
