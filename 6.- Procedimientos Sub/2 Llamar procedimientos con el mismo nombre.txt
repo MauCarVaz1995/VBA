@@ -1,0 +1,19 @@
+Function OperacionMatematica(Numero1 As Double, Numero2 As Double)
+
+    OperacionMatematica = Numero1 + Numero2
+
+End Function
+####################################################################################################
+Function OperacionMatematica(Numero1 As Double, Numero2 As Double)
+
+    OperacionMatematica = Numero1 - Numero2
+
+End Function
+###################################################################################################
+Sub Prueba()
+
+    Dim resultado As Double
+    
+    resultado = Módulo2.OperacionMatematica(5, 2)
+
+End Sub

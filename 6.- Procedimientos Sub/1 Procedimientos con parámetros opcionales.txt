@@ -1,0 +1,29 @@
+Sub MiMacro(nombre As String, Optional apellido As String)
+
+    MsgBox nombre & " " & apellido
+
+End Sub
+
+Sub Macro1()
+
+    Call MiMacro("Mauricio", "Carrillo")
+    
+
+End Sub
+
+Sub Macro2()
+
+    Call MiMacro2(1000, 0)
+
+End Sub
+
+Sub MiMacro2(Valor As Double, Optional ConIva As Boolean)
+
+    If ConIva = True Then
+        MsgBox Valor * 1.16
+    Else
+        
+        MsgBox Valor
+    End If
+
+End Sub
